@@ -1,0 +1,42 @@
+﻿@model UebungMVC_V10.Models.VModels.DataVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Datum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnfangDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnfangDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndeDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndeDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbstandDateTimeText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbstandDateTimeText)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DatumID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
