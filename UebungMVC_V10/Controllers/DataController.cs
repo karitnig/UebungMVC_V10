@@ -114,10 +114,8 @@ namespace UebungMVC_V10.Controllers
                 Datum datumModel = new Datum(vmData);
 
                 uow.DatumRepo.Update(datumModel);
-                //db.Entry(datum).State = EntityState.Modified;
 
                 await uow.CommitAsync();
-                //await db.SaveChangesAsync();
 
                 return RedirectToAction("Index");
             }

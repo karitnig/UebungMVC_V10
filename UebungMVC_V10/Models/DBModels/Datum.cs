@@ -37,6 +37,5 @@ namespace UebungMVC_V10.Models.DBModels
         [DisplayFormat(DataFormatString = "{0:hh:mm tt}", ApplyFormatInEditMode = true)]
         public string AbstandDateTimeText { get; set; }
 
-
     }
 }

@@ -20,7 +20,7 @@ namespace UebungMVC_V10.Models.VModels
             DatumID = data.DatumID;
             AnfangDateTime = data.AnfangDateTime;
             EndeDateTime = data.EndeDateTime;
-            AbstandDateTimeText = (data.EndeDateTime - data.AnfangDateTime).ToString();
+            AbstandDateTimeText = ((TimeSpan)(data.EndeDateTime - data.AnfangDateTime)).Days.ToString();
         }
 
         /// <summary>
@@ -29,6 +29,7 @@ namespace UebungMVC_V10.Models.VModels
         public DataVM()
         {
         }
+
         public int DatumID { get; set; }
 
         [DataType(DataType.Date), Display(Name = "AnfangsZeit")]
@@ -43,5 +44,7 @@ namespace UebungMVC_V10.Models.VModels
         //[DataType(DataType.DateTime), Display(Name = "Stunden")]
         //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public string AbstandDateTimeText { get; set; }
+
+
     }
 }
